@@ -1,7 +1,8 @@
 package com.yegor.task2.apples_1;
 
 /**
- * This class represents the work of tow stores, warehouse and provider
+ * This class represents the work of tow stores, warehouse and provider.
+ * Provider delivers apples at once when necessary.
  * Created by YegorKost on 08.02.2017.
  */
 public class TestStores {

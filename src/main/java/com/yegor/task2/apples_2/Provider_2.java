@@ -6,7 +6,7 @@ package com.yegor.task2.apples_2;
  * Created by YegorKost on 11.02.2017.
  */
 public class Provider_2 implements Runnable {
-    private final Warehouse_2 warehouse_2;
+    private Warehouse_2 warehouse_2;
     private int velumOfDelivers;
 
     public Provider_2(Warehouse_2 warehouse_2, int velumOfDelivers) {
@@ -19,9 +19,7 @@ public class Provider_2 implements Runnable {
         try {
             while (!Thread.interrupted()) {
                 System.out.println("Provider delivery apples: " + velumOfDelivers);
-                synchronized (warehouse_2) {
-                    warehouse_2.setCapacity(velumOfDelivers);
-                }
+                warehouse_2.setCapacity(velumOfDelivers);
                 Warehouse_2.getOrder().countDown();
                 Thread.sleep(8000);
             }

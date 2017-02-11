@@ -28,7 +28,7 @@ public class Warehouse_2 {
         this.capacity = capacity;
     }
 
-    public static CountDownLatch getOrder() {
+    public synchronized static CountDownLatch getOrder() {
         return order;
     }
 }
